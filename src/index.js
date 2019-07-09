@@ -62,12 +62,12 @@ ReactDOM.render(<App/>, document.getElementById('root'))
         && 
         col + colToAdd >= 0) 
        { return false }
-    // direction vertical up and diagonal top-left to bottom right, and top-right to bottom left
+    // direction vertical-up, diagonal top-left to bottom right, and diagonal top-right to bottom left
     if (rowToAdd === 1
         &&
         row + rowToAdd < this._board.length) 
        { return false }
-    // direction vertical down and diagonal bottom-left to top right, and bottom-right to top left
+    // direction vertical-down, diagonal bottom-left to top right, and diagonal bottom-right to top left
     if (rowToAdd === -1
         &&
         row + rowToAdd >= 0) 
