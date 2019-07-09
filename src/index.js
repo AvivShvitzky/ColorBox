@@ -19,6 +19,11 @@ ReactDOM.render(<App/>, document.getElementById('root'))
     if (numOfMarks === WINNING_MATCH) return true
     return false
   }
+
+  isMatchOneDirection(row, col, rowToAdd, colToAdd) {
+    // code goes here...
+  }
+
   marksInDirection(_row, _col, rowToAdd, colToAdd, _numOfMarks) {
     let numOfMarks = _numOfMarks
     let row = _row
