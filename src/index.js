@@ -46,6 +46,11 @@ ReactDOM.render(<App/>, document.getElementById('root'))
     }
     return numOfMarks
   }
+
+  marksInDirection(_row, _col, rowToAdd, colToAdd, _numOfMarks) {
+    // code goes here...
+  }
+
   overEdge(row, col, rowToAdd, colToAdd) {
     // direction horizontal to right
     if (rowToAdd === 0 && colToAdd === 1
