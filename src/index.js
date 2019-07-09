@@ -10,8 +10,15 @@ ReactDOM.render(<App/>, document.getElementById('root'))
     isMatch(row, col) {
       // code goes here...
   }
+
+  isMatch(row, col) {
+    return this.isMatchInOrientation(row, col, 0, 1) ||
+    this.isMatchInOrientation(row, col, 1, 0) ||
+    this.isMatchInOrientation(row, col, 1, 1) ||
+    this.isMatchInOrientation(row, col, -1, 1)
+  }
   
-  isMatchOneDirection(row, col, rowToAdd, colToAdd) {
+  isMatchInOrientation(row, col, rowToAdd, colToAdd) {
     let numOfMarks = 1
     numOfMarks = this.marksInDirection(row, col, rowToAdd, colToAdd, numOfMarks)
     if (numOfMarks === WINNING_MATCH) return true
@@ -20,7 +27,7 @@ ReactDOM.render(<App/>, document.getElementById('root'))
     return false
   }
 
-  isMatchOneDirection(row, col, rowToAdd, colToAdd) {
+  isMatchInOrientation(row, col, rowToAdd, colToAdd) {
     // code goes here...
   }
 
